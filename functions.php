@@ -134,18 +134,29 @@ function agencylangerandfriends_widgets_init() {
 }
 add_action( 'widgets_init', 'agencylangerandfriends_widgets_init' );
 
+
+// function to register styles
+function agencylangerandfriends_regsiter_styles(){
+    $version = wp_get_theme()->get('Version'); // Get version defined in style.css
+    wp_enqueue_style('agencylangerandfriends_bootstrap', "https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css",array(), '5.1.3', 'all');
+    wp_enqueue_style('agencylangerandfriends_fontawesome', "https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/fontawesome.min.css",array(), '6.0.0', 'all');
+	wp_enqueue_style('agencylangerandfriends_swiper',"https://unpkg.com/swiper/swiper-bundle.min.css",array(), $version, 'all');
+	wp_enqueue_style('agencylangerandfriends_imggalarystyle',get_template_directory_uri() . "/assets/css/header&footer.css",array(), $version, 'all');
+    wp_enqueue_style('langerandfriends_style',get_template_directory_uri() . "/style.css",array(), $version, 'all');
+}
+
+// Run our function at the time of Wordpress wp_enqueue_scripts
+add_action('wp_enqueue_scripts','agencylangerandfriends_regsiter_styles');
+
 /**
  * Enqueue scripts and styles.
  */
 function agencylangerandfriends_scripts() {
-	wp_enqueue_style( 'agencylangerandfriends-style', get_stylesheet_uri(), array(), _S_VERSION );
-	wp_style_add_data( 'agencylangerandfriends-style', 'rtl', 'replace' );
-
-	wp_enqueue_script( 'agencylangerandfriends-navigation', get_template_directory_uri() . '/js/navigation.js', array(), _S_VERSION, true );
-
-	if ( is_singular() && comments_open() && get_option( 'thread_comments' ) ) {
-		wp_enqueue_script( 'comment-reply' );
-	}
+	$version = wp_get_theme()->get('Version');
+    wp_enqueue_script('agencylangerandfriends_jquery',"https://code.jquery.com/jquery-3.6.0.min.js",array(), '3.6.0', true);
+	wp_enqueue_script('agencylangerandfriends_popperscript',"https://cdn.jsdelivr.net/npm/popper.js@1.14.3/dist/umd/popper.min.js",array(), '1.14.3', 'all');
+	wp_enqueue_script('agencylangerandfriends_bootstrapscript',"https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js",array(), '5.1.3', 'all');
+    wp_enqueue_script('agencylangerandfriends_script',get_template_directory_uri() . "/assets/js/main.js",array(), $version, 'all');
 }
 add_action( 'wp_enqueue_scripts', 'agencylangerandfriends_scripts' );
 
@@ -176,3 +187,14 @@ if ( defined( 'JETPACK__VERSION' ) ) {
 	require get_template_directory() . '/inc/jetpack.php';
 }
 
+// For dynamic Menus
+function agencylangerandfriends_menus(){
+	$locations = array(
+        'header' => "Header Menu",
+        'footer' => "Footer Menu"
+    );
+
+    register_nav_menus($locations);
+}
+
+add_action('init','agencylangerandfriends_menus');

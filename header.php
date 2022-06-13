@@ -20,40 +20,76 @@
 	<?php wp_head(); ?>
 </head>
 
-<body <?php body_class(); ?>>
-<?php wp_body_open(); ?>
-<div id="page" class="site">
-	<a class="skip-link screen-reader-text" href="#primary"><?php esc_html_e( 'Skip to content', 'agencylangerandfriends' ); ?></a>
+<body>
+	<header class="bg-header">
 
-	<header id="masthead" class="site-header">
-		<div class="site-branding">
-			<?php
-			the_custom_logo();
-			if ( is_front_page() && is_home() ) :
-				?>
-				<h1 class="site-title"><a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home"><?php bloginfo( 'name' ); ?></a></h1>
-				<?php
-			else :
-				?>
-				<p class="site-title"><a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home"><?php bloginfo( 'name' ); ?></a></p>
-				<?php
-			endif;
-			$agencylangerandfriends_description = get_bloginfo( 'description', 'display' );
-			if ( $agencylangerandfriends_description || is_customize_preview() ) :
-				?>
-				<p class="site-description"><?php echo $agencylangerandfriends_description; // phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped ?></p>
-			<?php endif; ?>
-		</div><!-- .site-branding -->
+		<div class="">
+			<div class="row">
+				<div class="col col-lg-6 col-sm-12 align-right">
+					<a class="navbar-brand bg-text" href="#">GET HAIRED!</a>
+					<a class="navbar-brand mg-l" href="#"><i class="fa fa-envelope" aria-hidden="true"></i>
+					hello@langerandfriends.de</a>
+				</div>
+				<div class="col col-lg-6 col-sm-12 pf-20">
+					<a c href="#">
+						<img src="/assets/img/ryte_solution_partner.png" width="100px" />
+					</a>
+					<a  href="#">
+						<img src="/assets/img/shopify-plus-partner-logo.png" width="100px" />
+					</a>
+					<a  href="#">
+							<img src="/assets/img/ryte_solution_partner.png" width="100px" />
+					</a>
+					<a href="#">
+						<img src="/assets/img/instagram.png" width="32px" />
+					</a>
+					<a  href="#">
+						<img src="/assets/img/linkedin.png" width="32px" />
 
-		<nav id="site-navigation" class="main-navigation">
-			<button class="menu-toggle" aria-controls="primary-menu" aria-expanded="false"><?php esc_html_e( 'Primary Menu', 'agencylangerandfriends' ); ?></button>
-			<?php
-			wp_nav_menu(
-				array(
-					'theme_location' => 'menu-1',
-					'menu_id'        => 'primary-menu',
-				)
-			);
-			?>
-		</nav><!-- #site-navigation -->
-	</header><!-- #masthead -->
+					</a>
+				</div>
+
+
+			</div>
+		</div>
+	</header>
+	<nav class="navbar navbar-expand-lg navbar-dark bg-blue">
+		<a class="navbar-brand" href="#">LONGER AND FRIENDS</a>
+		<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav"
+			aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+			<span class="navbar-toggler-icon"></span>
+		</button>
+		<div class="collapse navbar-collapse" id="navbarNav">
+			<ul class="navbar-nav">
+				<li class="nav-item active">
+					<a class="nav-link" href="#">TEAM <span class="sr-only">(current)</span></a>
+				</li>
+				<li class="nav-item">
+					<a class="nav-link" href="#">SHOPIFY</a>
+				</li>
+				<li class="nav-item">
+					<a class="nav-link" href="#">JTL</a>
+				</li>
+				<li class="nav-item">
+					<a class="nav-link " href="#">METAVERSE</a>
+				</li>
+				<li class="nav-item">
+					<a class="nav-link " href="#">SEO</a>
+				</li>
+				<li class="nav-item">
+					<a class="nav-link disabled" href="#">SOCIAL MEDIA</a>
+				</li>
+			</ul>
+		</div>
+	</nav>
+	<header>
+		<div class="rechteck2">
+			<div class="col col-lg-10 offset-lg-2">
+				<h2 class="text-white ">
+					THIS IS A <br/>
+					HEADLINE ABOUT <br/>
+					A NEW POST
+				</h2>
+			</div>
+		</div>
+	</header>

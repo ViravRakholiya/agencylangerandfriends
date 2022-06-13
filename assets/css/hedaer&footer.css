@@ -1,0 +1,136 @@
+.rechteck2 {
+
+    background-image: url("assets/img/header_1.jpg");
+    background-color: #0d2050;
+    height: 700px;
+    width: 100%;
+    left: 0.00px;
+    top: 0.00px;
+
+}
+.bg-header {
+
+    background-image: url("assets/img/header.png") !important;
+    background-color: #0d2050 !important; !image-rendering: 
+    /*height: 1000px;*/
+    left: 0.00px;
+    top: 0.00px;
+    padding-top: 7px;
+    padding-bottom: 2px;
+
+}
+.navbar-brand{
+    margin-left: 15%;
+    margin-right: 10% !important;
+    color: white !important
+}
+
+@media screen and (max-width: 600px) {
+  .navbar-brand{
+      margin-left: 0;
+      margin-right: 10% !important;
+      color: white !important
+  }
+}
+
+.navbar-light .navbar-nav .active>.nav-link{
+  color: #75e475 !important;
+}
+.bg-blue{
+  background-color: #0d2050 !important;
+  color: white !important;
+
+}
+.navbar-light .navbar-nav .nav-link{
+  color: white !important
+}
+.navbar{
+  height: 50px;
+}
+
+.navbar-collapse.collapse.show {
+  z-index: 1000;
+  background-color: #0d2050;
+  padding-left: 10px;
+}
+
+.footer{
+  margin-top: 10px;
+   background-image: url("assets/img/Rectangle_32_x@2x.png");
+    /*background-repeat: repeat-y;*/
+   /*margin-left: -20px !important;*/
+    left: 0px !important;
+    top: 0px;
+
+  .links{
+    ul {list-style-type: none;}
+    li a{
+      color: white;
+      transition: color .2s;
+      &:hover{
+        text-decoration:none;
+        color:#4180CB;
+        }
+    }
+  }  
+  .about-company{
+    i{font-size: 25px;}
+    a{
+      color:white;
+      transition: color .2s;
+      &:hover{color:#4180CB}
+    }
+  } 
+  .location{
+    i{font-size: 18px;}
+  }
+  .copyright p{border-top:1px solid rgba(255,255,255,.1);} 
+}
+
+.text-blue {
+  color: blue;
+}
+.mg-l{
+  margin-left: 0px !important;
+  /*background-color: whi*/
+}
+.bg-text{
+  background-color: white;
+  color: rgba(39,0,255,1) !important;
+  font-size: 14px !important;
+  text-decoration: bold !important;
+  border-radius: 20px;
+  padding-top: 0px !important;
+  padding-bottom: 0px !important;
+  padding-left: 1px !important;
+  padding-right: 1px !important
+}
+.text-white{
+  padding-top: 100px !important;
+  font-size: 100px
+
+}
+.pt-5, .py-5 {
+    padding-top: 10rem!important;
+}
+.footer {
+
+    background-image: url("assets/img/Rectangle_32_x@2x.png");
+    /*background-color: #0d2050;*/
+   /* height: 700px;
+    width: 100%;
+    left: 0.00px;
+    top: 0.00px;*/
+  }
+  .col-lg-6 .align-right{
+    text-align: right;
+  }
+  .col-sm-12 .align-right{
+    text-align: left !important;
+  }
+  .pf-20{
+    padding-left: 161px !important;
+  }
+.navbar-dark .navbar-toggler-icon {
+  background-image: url("data:image/svg+xml;..");
+}
